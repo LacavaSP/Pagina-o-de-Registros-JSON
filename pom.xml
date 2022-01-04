@@ -18,7 +18,7 @@
 		<java.version>11</java.version>
 		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
 		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.codahale.metrics/metrics-core -->
@@ -47,6 +47,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>2.4.2</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
@@ -54,6 +59,11 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>2.2.1</version>
 		</dependency>
 	</dependencies>
 
@@ -75,6 +85,10 @@
 						<!-- other annotation processors -->
 					</annotationProcessorPaths>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
